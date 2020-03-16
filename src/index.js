@@ -10,3 +10,9 @@ const map = new mapboxgl.Map({
   zoom: 12, // starting zoom
   style: "mapbox://styles/mapbox/streets-v11" // mapbox has lots of different map styles available.
 });
+
+const markerDomElm =  document.getElementById('map')
+markerDomElm.style.width = "32px";
+markerDomElm.style.height = "39px";
+markerDomElm.style.backgroundImage = "url(http://i.imgur.com/WbMOfMl.png)";
+new mapboxgl.Marker(markerDomElm).setLngLat([-74.009, 40.705]).addTo(map);
